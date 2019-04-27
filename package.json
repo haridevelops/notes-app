@@ -1,0 +1,16 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Notes Taking app for a meeting",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "haridevelops",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "validator": "^10.11.0",
+    "yargs": "^13.2.2"
+  }
+}
