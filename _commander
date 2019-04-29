@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+'use strict';
+
+const program = require('commander');
+const notes = require('./notes')
+ 
+program
+  .command('add')
+  .arguments('<title> <body...>')
+  .action((title, body) => notes.addNotes(title, body.join(" ")))
+
+program
+  .command('remove')
+  .arguments('<title>')
+  .action((title) => notes.removeNotes(title))
+
+program
+  .command('read')
+  .arguments('<title>')
+  .action((title) => notes.readNotes(title))
+
+program
+  .command('list')
+  .description('list all the notes')
+  .action(() => notes.listNotes())
+
+program.parse(process.argv)
